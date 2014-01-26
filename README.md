@@ -42,11 +42,24 @@ To create responsive sprite with bootstrap fluid grid, use :
       @include sm-heigh(0.6 * <map>-sprite-height(<sprite-name>));
       
       /** Form extra small screen  between 480 and 768px lets reduce 50% size **/
-      @include sm-width(0.5 * <map>-sprite-width(<sprite-name>));
-      @include sm-heigh(0.5 * <map>-sprite-height(<sprite-name>));
+      @include xs-width(0.5 * <map>-sprite-width(<sprite-name>));
+      @include xs-heigh(0.5 * <map>-sprite-height(<sprite-name>));
     }
     
 Woking with bootstrap it nessessary to ad only sizes to 4 breakpoints
 
 
 Mixins added for xs sm md properties like in example.
+They create bootstrap media query 
+ex. 
+        @media(min-width:768px){
+        }
+        
+If you want to use max-width instead of min-width, add seconnd true parametr.
+ex.:
+        @include sm-font-size(20px,true);
+        
+will be converted to
+        @media (max-width: 992px){
+            font-size : 20px;
+        }
