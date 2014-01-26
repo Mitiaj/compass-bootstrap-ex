@@ -1,0 +1,227 @@
+$lg-min-width : 1200px;
+$md-min-width : 992px;
+$sm-min-width : 768px;
+$xs-min-width : 480px;
+
+@mixin xs-attr($attr, $val, $max : false) {
+  @if $max == false {
+    @media (min-width: $xs-min-width ) {
+      #{$attr} : $val;
+    }
+  } @else {
+    @media (max-width: $sm-min-width + 1) {
+      #{$attr} : $val;
+    }
+  }
+}
+@mixin sm-attr($attr, $val, $max : false) {
+  @if $max == false {
+    @media (min-width: $sm-min-width ) {
+      #{$attr} : $val;
+    }
+  } @else {
+    @media (max-width: $md-min-width + 1 ) {
+      #{$attr} : $val;
+    }
+  }
+}
+@mixin md-attr($attr, $val, $max : false) {
+  @if $max == false {
+    @media (min-width: $md-min-width ) {
+      #{$attr} : $val;
+    }
+  } @else {
+    @media (max-width: $lg-min-width + 1 ) {
+      #{$attr} : $val;
+    }
+  }
+}
+
+@mixin xs-width($val, $max : false) {
+  @include xs-attr('width',$val,$max);
+}
+@mixin xs-height($val, $max : false) {
+  @include xs-attr('height',$val,$max);
+}
+@mixin xs-line-height($val, $max : false) {
+  @include xs-attr('line-height',$val,$max);
+}
+@mixin sm-width($val, $max : false) {
+  @include sm-attr('width',$val,$max);
+}
+@mixin sm-height($val, $max : false) {
+  @include sm-attr('height',$val,$max);
+}
+@mixin sm-line-height($val, $max : false) {
+  @include sm-attr('line-height',$val,$max);
+}
+@mixin md-width($val, $max : false) {
+  @include md-attr('width',$val,$max);
+}
+@mixin md-height($val, $max : false) {
+  @include md-attr('height',$val,$max);
+}
+@mixin md-line-height($val, $max : false) {
+  @include md-attr('line-height',$val,$max);
+}
+
+
+@mixin xs-padding($val, $max : false) {
+  @include xs-attr('padding',$val,$max);
+}
+@mixin xs-padding-top($val, $max : false) {
+  @include xs-attr('padding-top',$val,$max);
+}
+@mixin xs-padding-right($val, $max : false) {
+  @include xs-attr('padding-right',$val,$max);
+}
+@mixin xs-padding-bottom($val, $max : false) {
+  @include xs-attr('padding-bottom',$val,$max);
+}
+@mixin xs-padding-left($val, $max : false) {
+  @include xs-attr('padding-left',$val,$max);
+}
+
+@mixin sm-padding($val, $max : false) {
+  @include sm-attr('padding',$val,$max);
+}
+@mixin sm-padding-top($val, $max : false) {
+  @include sm-attr('padding-top',$val,$max);
+}
+@mixin sm-padding-right($val, $max : false) {
+  @include sm-attr('padding-right',$val,$max);
+}
+@mixin sm-padding-bottom($val, $max : false) {
+  @include sm-attr('padding-bottom',$val,$max);
+}
+@mixin sm-padding-left($val, $max : false) {
+  @include sm-attr('padding-left',$val,$max);
+}
+
+@mixin md-padding($val, $max : false) {
+  @include md-attr('padding',$val,$max);
+}
+@mixin md-padding-top($val, $max : false) {
+  @include md-attr('padding-top',$val,$max);
+}
+@mixin md-padding-right($val, $max : false) {
+  @include md-attr('padding-right',$val,$max);
+}
+@mixin md-padding-bottom($val, $max : false) {
+  @include md-attr('padding-bottom',$val,$max);
+}
+@mixin md-padding-left($val, $max : false) {
+  @include md-attr('padding-left',$val,$max);
+}
+
+@mixin xs-margin($val, $max : false) {
+  @include xs-attr('margin',$val,$max);
+}
+@mixin xs-margin-top($val, $max : false) {
+  @include xs-attr('margin-top',$val,$max);
+}
+@mixin xs-margin-right($val, $max : false) {
+  @include xs-attr('margin-right',$val,$max);
+}
+@mixin xs-margin-bottom($val, $max : false) {
+  @include xs-attr('margin-bottom',$val,$max);
+}
+@mixin xs-margin-left($val, $max : false) {
+  @include xs-attr('margin-left',$val,$max);
+}
+
+@mixin sm-margin($val, $max : false) {
+  @include sm-attr('margin',$val,$max);
+}
+@mixin sm-margin-top($val, $max : false) {
+  @include sm-attr('margin-top',$val,$max);
+}
+@mixin sm-margin-right($val, $max : false) {
+  @include sm-attr('margin-right',$val,$max);
+}
+@mixin sm-margin-bottom($val, $max : false) {
+  @include sm-attr('margin-bottom',$val,$max);
+}
+@mixin sm-margin-left($val, $max : false) {
+  @include sm-attr('margin-left',$val,$max);
+}
+
+@mixin md-margin($val, $max : false) {
+  @include md-attr('margin',$val,$max);
+}
+@mixin md-margin-top($val, $max : false) {
+  @include md-attr('margin-top',$val,$max);
+}
+@mixin md-margin-right($val, $max : false) {
+  @include md-attr('margin-right',$val,$max);
+}
+@mixin md-margin-bottom($val, $max : false) {
+  @include md-attr('margin-bottom',$val,$max);
+}
+@mixin md-margin-left($val, $max : false) {
+  @include md-attr('margin-left',$val,$max);
+}
+
+@mixin md-position($val, $max : false) {
+  @include md-attr('position',$val,$max);
+}
+@mixin sm-position($val, $max : false) {
+  @include sm-attr('position',$val,$max);
+}
+@mixin xs-position($val, $max : false) {
+  @include xs-attr('position',$val,$max);
+}
+@mixin md-top($val, $max : false) {
+  @include md-attr('top',$val,$max);
+}
+@mixin sm-top($val, $max : false) {
+  @include sm-attr('top',$val,$max);
+}
+@mixin xs-top($val, $max : false) {
+  @include xs-attr('top',$val,$max);
+}
+@mixin md-right($val, $max : false) {
+  @include md-attr('right',$val,$max);
+}
+@mixin sm-right($val, $max : false) {
+  @include sm-attr('right',$val,$max);
+}
+@mixin xs-right($val, $max : false) {
+  @include xs-attr('right',$val,$max);
+}
+@mixin md-bottom($val, $max : false) {
+  @include md-attr('bottom',$val,$max);
+}
+@mixin sm-bottom($val, $max : false) {
+  @include sm-attr('bottom',$val,$max);
+}
+@mixin xs-bottom($val, $max : false) {
+  @include xs-attr('bottom',$val,$max);
+}
+@mixin md-left($val, $max : false) {
+  @include md-attr('left',$val,$max);
+}
+@mixin sm-left($val, $max : false) {
+  @include sm-attr('left',$val,$max);
+}
+@mixin xs-left($val, $max : false) {
+  @include xs-attr('left',$val,$max);
+}
+@mixin md-font-size($val, $max : false) {
+  @include md-attr('font-size',$val,$max);
+}
+@mixin sm-font-size($val, $max : false) {
+  @include sm-attr('font-size',$val,$max);
+}
+@mixin xs-font-size($val, $max : false) {
+  @include xs-attr('font-size',$val,$max);
+}
+@mixin md-border($val, $max : false) {
+  @include md-attr('border',$val,$max);
+}
+@mixin sm-border($val, $max : false) {
+  @include sm-attr('border',$val,$max);
+}
+@mixin xs-border($val, $max : false) {
+  @include xs-attr('border',$val,$max);
+}
