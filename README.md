@@ -52,14 +52,17 @@ Woking with bootstrap it nessessary to ad only sizes to 4 breakpoints
 Mixins added for xs sm md properties like in example.
 They create bootstrap media query 
 ex. 
+
         @media(min-width:768px){
         }
         
 If you want to use max-width instead of min-width, add seconnd true parametr.
 ex.:
+
         @include sm-font-size(20px,true);
         
 will be converted to
+
         @media (max-width: 992px){
             font-size : 20px;
         }
