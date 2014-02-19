@@ -98,6 +98,8 @@ example:
 -----
 
 Combined everything to one mixin, usage:
+
+
         div {
                 /*It will include sprite, add padding, bg-size property, percentage positioning.*/
             @include <map>-sprite-responsive($name);
