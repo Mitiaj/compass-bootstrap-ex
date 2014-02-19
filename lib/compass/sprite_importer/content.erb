@@ -68,7 +68,11 @@ $<%= name %>-inline            : false !default;
 }
 
 @mixin <%= name %>-sprite-bg-size($name) {
-  @include sprite-background-size($<%= name %>-sprites, $name)
+   @include sprite-background-size($<%= name %>-sprites, $name)
+ }
+
+@mixin <%= name %>-sprite-padding-top($name) {
+  @include sprite-responsive-padding-top($<%= name %>-sprites, $name)
 }
 
 // Extends the sprite base class and set the background position for the desired sprite.

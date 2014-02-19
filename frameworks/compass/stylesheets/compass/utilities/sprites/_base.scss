@@ -28,6 +28,12 @@ $use-percentages: false) {
   @include background-size($spriteWidth/$width * 100%);
 }
 
+@mixin sprite-responsive-padding-top($map, $sprite) {
+    $spritePath:    sprite-path($map);
+    $spriteWidth:   image-width($spritePath);
+    $spriteHeight:  image-height($spritePath);
+    padding-top: $spriteHeight/$spriteWidth * 100%;
+}
 
 // Determines if you want to include magic selectors in your sprites
 $disable-magic-sprite-selectors:false !default;
