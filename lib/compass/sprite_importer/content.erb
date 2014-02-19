@@ -82,6 +82,11 @@ $<%= name %>-inline            : false !default;
   @include sprite($<%= name %>-sprites, $name, $dimensions, $offset-x, $offset-y, $use-percentages);
 }
 
+@mixin <%= name %>-sprite-responsive($name, $offset-x: 0, $offset-y: 0, $use-percentages: true) {
+  @extend #{$<%= name %>-sprite-base-class};
+  @include sprite-responsive($<%= name %>-sprites, $name, $offset-x, $offset-y, $use-percentages);
+}
+
 @mixin <%= name %>-sprites($sprite-names, $dimensions: $<%= name %>-sprite-dimensions, $prefix: sprite-map-name($<%= name %>-sprites), $offset-x: 0, $offset-y: 0, $use-percentages: $<%= name %>-use-percentages) {
   @include sprites($<%= name %>-sprites, $sprite-names, $<%= name %>-sprite-base-class, $dimensions, $prefix, $offset-x, $offset-y, $use-percentages)
 }

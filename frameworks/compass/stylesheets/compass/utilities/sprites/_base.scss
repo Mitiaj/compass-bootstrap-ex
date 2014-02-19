@@ -35,6 +35,16 @@ $use-percentages: false) {
     padding-top: $spriteHeight/$spriteWidth * 100%;
 }
 
+@mixin sprite-responsive($map, $sprite, $offset-x: 0, $offset-y: 0, $use-percentages: true) {
+    @include sprite-background-position($map, $sprite, $offset-x, $offset-y, $use-percentages);
+    @include sprite-background-size($map, $sprite);
+    @include sprite-responsive-padding-top($map, $sprite);
+    @if not $disable-magic-sprite-selectors {
+        @include sprite-selectors($map, $sprite, $sprite, $offset-x, $offset-y,
+            $use-percentages);
+    }
+}
+
 // Determines if you want to include magic selectors in your sprites
 $disable-magic-sprite-selectors:false !default;
 
