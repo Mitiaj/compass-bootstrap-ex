@@ -66,3 +66,31 @@ will be converted to
         @media (max-width: 992px){
             font-size : 20px;
         }
+        
+        
+#Update
+-----
+To make 100% responsive sprites, like images now it`s possible with <map>-sprite-padding-top($name) mixin.
+Container position should be set to relative, everything what goes inside you can deal with absolute.
+
+example:
+         
+        
+        /*using smart layout for images in sprite (by default its vertical ? )*/
+        $icons-layout:smart;
+        
+        /*this will enable 'backround-position: x y' to set with percetages*/ 
+        $icons-use-percentages: true;
+        
+        /*icons is just a folder with images in "images" folder which is defined in config.rb file*/
+        @import "icons/*.png";
+        
+        div {
+            @include icons-sprite(facebook-icon);
+            @include icons-sprite-bg-size(facebook-icon);
+            @include icons-sprite-padding-top(facebook-icon);
+            
+            /* Actualy it doesnt matter, haight will be adjusted because of padding top*/
+            width: 100%;
+        }
+        
