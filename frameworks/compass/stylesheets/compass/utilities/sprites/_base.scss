@@ -30,9 +30,9 @@ $use-percentages: false) {
 
 @mixin sprite-responsive-padding-top($map, $sprite) {
     $spritePath:    sprite-path($map);
-    $spriteWidth:   image-width($spritePath);
-    $spriteHeight:  image-height($spritePath);
-    padding-top: $spriteHeight/$spriteWidth * 100%;
+	$width: image-width(sprite-file($map, $sprite));
+    $height: image-height(sprite-file($map, $sprite));
+    padding-top: $height/$width * 100%;
 }
 
 @mixin sprite-responsive($map, $sprite, $offset-x: 0, $offset-y: 0, $use-percentages: true) {

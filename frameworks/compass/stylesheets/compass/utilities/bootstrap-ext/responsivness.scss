@@ -5,36 +5,41 @@ $xs-min-width : 480px;
 
 @mixin xs-attr($attr, $val, $max : false) {
   @if $max == false {
-    @media (min-width: $xs-min-width ) {
+    @media (min-width: $xs-min-width ) and (max-width: $sm-min-width - 1) {
       #{$attr} : $val;
     }
   } @else {
-    @media (max-width: $sm-min-width + 1) {
+    @media (max-width: $sm-min-width - 1) {
       #{$attr} : $val;
     }
   }
 }
 @mixin sm-attr($attr, $val, $max : false) {
   @if $max == false {
-    @media (min-width: $sm-min-width ) {
+    @media (min-width: $sm-min-width) and (max-width: $md-min-width - 1){
       #{$attr} : $val;
     }
   } @else {
-    @media (max-width: $md-min-width + 1 ) {
+    @media (max-width: $md-min-width - 1 ) {
       #{$attr} : $val;
     }
   }
 }
 @mixin md-attr($attr, $val, $max : false) {
   @if $max == false {
-    @media (min-width: $md-min-width ) {
+    @media (min-width: $md-min-width) and (max-width: $lg-min-width - 1) {
       #{$attr} : $val;
     }
   } @else {
-    @media (max-width: $lg-min-width + 1 ) {
+    @media (max-width: $lg-min-width - 1 ) {
       #{$attr} : $val;
     }
   }
+}
+@mixin lg-attr($attr, $val) {
+	@media (min-width: $lg-min-width ){
+	  #{$attr} : $val;
+	}
 }
 
 @mixin xs-width($val, $max : false) {
